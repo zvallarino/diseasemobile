@@ -1,6 +1,8 @@
 import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 import tailwind from 'twrnc'
+import ModalDropdown from 'react-native-modal-dropdown'
+// import ModalDropdown from 'react-native-modal-dropdown';
 
 const FilterScreen = () => {
   return (
@@ -9,9 +11,11 @@ const FilterScreen = () => {
       <View>
         <Text>Please, Select a date range</Text>
       </View>
-      <TouchableOpacity>
-        <Text>Custom Range</Text>
-      </TouchableOpacity>
+      <ModalDropdown
+      options={
+        [
+          '3 Months', '6 Months', '1 Year','2 Years','3 Years','All Available'
+          ]}/>
       
       <Text>Travel</Text>
       <View>

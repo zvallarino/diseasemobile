@@ -9,7 +9,12 @@ const RootStack = createNativeStackNavigator()
 const RootNavigator = () => {
   return (
     <RootStack.Navigator>
-       <RootStack.Screen name="Title" component={TitleScreen}/>
+       <RootStack.Screen 
+        options={{
+          headerShown: false,
+        }}
+       
+       name="Title" component={TitleScreen}/>
       <RootStack.Group>
         <RootStack.Screen name="Main" component={TabNavigator}/>
       </RootStack.Group>
