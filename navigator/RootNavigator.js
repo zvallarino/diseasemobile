@@ -16,7 +16,11 @@ const RootNavigator = () => {
        
        name="Title" component={TitleScreen}/>
       <RootStack.Group>
-        <RootStack.Screen name="Main" component={TabNavigator}/>
+        <RootStack.Screen 
+            options={{
+              headerShown: false,
+            }}
+        name="Main" component={TabNavigator}/>
       </RootStack.Group>
     </RootStack.Navigator>
   )
